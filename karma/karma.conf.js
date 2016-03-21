@@ -1,23 +1,22 @@
 // Karma configuration
-// Generated on Thu Mar 10 2016 15:58:28 GMT+0800 (中国标准时间)
+// Generated on Mon Mar 21 2016 18:32:59 GMT+0800 (中国标准时间)
 
 module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: 'test',
+    basePath: '',
 
-    // list of files / patterns to load in the browser
-    files: [
-        'jasmineTest.js',
-        'test.js'
-    ],
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
 
 
+    // list of files / patterns to load in the browser
+    files: [
+      '../test/*.js'
+    ],
 
 
     // list of files to exclude
@@ -28,19 +27,15 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-        '../test/test.js': 'coverage'
     },
 
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress','coverage'],
+    reporters: ['progress'],
 
-    coverageReporter:{
-        type:'html',
-        dir:'../test/coverage/'
-    },
+
     // web server port
     port: 9876,
 
