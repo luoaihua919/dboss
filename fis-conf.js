@@ -100,7 +100,7 @@ fis.media('xampp').match("**/*", {
 /**********************生产环境下CSS、JS压缩合并*****************/
 //使用方法 fis3 release prod
 fis.media('prod').match("**/*", {
-        url: '${product}${statics}/$&' //在本地环境下的文件访问路径,如发布到生成环境一定要去掉
+        url: '${product}${statics}/$&' //在本地环境下的文件访问路径,如发布到生产环境一定要去掉
     })
     //注意压缩时.async.js文件是异步加载的，不能直接用annotate解析
     .match('**.js', {
